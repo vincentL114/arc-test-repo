@@ -1,0 +1,16 @@
+name: Test Local ARC
+on:
+  workflow_dispatch: # 这个指令允许你在网页上手动点按钮触发
+
+jobs:
+  test-job:
+    runs-on: qbox-ubuntu-22.04 # 关键！必须和你的车间名字一模一样
+    steps:
+      - name: 步骤一：打印欢迎语
+        run: echo "🎉 Hello, 我的本地 ARC 成功跑通了！"
+        
+      - name: 步骤二：看看是谁在干活
+        run: uname -a
+        
+      - name: 步骤三：休息15秒，让你有时间拍照留念
+        run: sleep 15
