@@ -1,5 +1,7 @@
 name: Test Local ARC
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch: # 这个指令允许你在网页上手动点按钮触发
 
 jobs:
