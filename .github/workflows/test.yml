@@ -1,4 +1,4 @@
-name: Test Local ARC
+name: Test Local Mac Runner
 on:
   push:
     branches: [ main ]
@@ -6,13 +6,19 @@ on:
 
 jobs:
   test-job:
-    runs-on: qbox-ubuntu-22.04 # 关键！必须和你的车间名字一模一样
+    runs-on: mac-local-test
     steps:
       - name: 步骤一：打印欢迎语
-        run: echo "🎉 Hello, 我的本地 ARC 成功跑通了！"
+        run: echo "🎉 Hello, 我的本地 Mac Runner 成功跑通了！"
         
-      - name: 步骤二：看看是谁在干活
+      - name: 步骤二：看看是谁在干活 (确认是 Mac 架构)
         run: uname -a
         
-      - name: 步骤三：休息15秒，让你有时间拍照留念
+      - name: 步骤三：制造一点垃圾文件 (用来测试清理功能)
+        run: |
+          echo "这是一份测试垃圾文件" > dirty-test-file.txt
+          pwd
+          ls -la
+          
+      - name: 步骤四：休息15秒
         run: sleep 15
