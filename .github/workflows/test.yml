@@ -6,7 +6,7 @@ on:
 
 jobs:
   test-job:
-    runs-on: mac-local-test
+    runs-on: self-hosted
     steps:
       - name: 步骤一：打印欢迎语
         run: echo "🎉 Hello, 我的本地 Mac Runner 成功跑通了！"
