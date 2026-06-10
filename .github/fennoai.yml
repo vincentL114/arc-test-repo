@@ -1,0 +1,4 @@
+default_ai_provider: claude
+
+claude:
+  model: "claude-4.6-opus[1m]"
