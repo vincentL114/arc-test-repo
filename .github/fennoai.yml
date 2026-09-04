@@ -1,4 +1,4 @@
-default_ai_provider: claude
+default_ai_provider: codex
 
-claude:
-  model: "claude-4.6-opus[1m]"
+codex:
+  model: "gpt-5.5"
